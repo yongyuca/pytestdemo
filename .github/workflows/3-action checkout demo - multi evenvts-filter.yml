@@ -1,4 +1,4 @@
-name: 2-action checkout demo - multi events filter
+name: 3-action checkout demo - multi events filter
 on: 
   push:
     branches:
