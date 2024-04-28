@@ -1,4 +1,4 @@
-name: pytest-2-checkout internal
+name: 1-pytest-action checkout demo
 on: workflow_dispatch
 
 jobs:
