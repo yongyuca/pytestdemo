@@ -1,6 +1,14 @@
-name: 2-action checkout demo - multi enevt
-on: [push, workflow_dispatch]
-
+name: 2-action checkout demo - multi events filter
+on: 
+  push:
+    branches:
+      - 'dev/**'
+  pull_request:
+    branches:
+      - 'releases/**'   
+  workflow_dispatch:
+  
+  
 jobs:
   pytest:
     runs-on: ubuntu-latest
