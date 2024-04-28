@@ -1,18 +1,15 @@
 name: 2-action checkout demo - multi events filter
-on: 
-  push:
-    branches:
-      - '*'
-      - '!main'  
-  pull_request:
-    branches:
-      - 'releases/**'   
-  workflow_dispatch:
+on: push
+
   
   
 jobs:
   pytest:
     runs-on: ubuntu-latest
+    if:
+      contains('
+        refs/heads/dev
+      ', github.ref)
 
     steps:
       - name: checkout code
