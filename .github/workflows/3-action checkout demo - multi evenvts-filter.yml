@@ -2,7 +2,8 @@ name: 2-action checkout demo - multi events filter
 on: 
   push:
     branches:
-      - 'dev/**'
+      - '*'
+      - '!main'
   pull_request:
     branches:
       - 'releases/**'   
